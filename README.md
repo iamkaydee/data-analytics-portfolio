@@ -11,10 +11,10 @@
 - `/datasets` - Sample datasets for practice
 
 ## 🛠️ Tools I'm Learning
-- Excel / Google Sheets
+- Excel
 - SQL
-- Power BI / Tableau
-- Git & GitHub
+- Power BI
+- GitHub
 
 ## 📈 Current Goal
 Building my data analytics portfolio one commit at a time!
