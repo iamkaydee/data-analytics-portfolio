@@ -1,5 +1,3 @@
-# data-analytics-portfolio
-This repository begins the Journey
 # 👋 Hi, I'm Kayode Alao
 
 ## About Me
