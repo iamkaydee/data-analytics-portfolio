@@ -1,0 +1,17 @@
+# Excel temp files
+~$*.xlsx
+*.tmp
+
+# Large data files
+*.csv
+*.xlsx
+
+# Python files
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Jupyter
+.ipynb_checkpoints/
