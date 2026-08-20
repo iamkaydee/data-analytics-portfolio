@@ -2,7 +2,7 @@
 
 ## About Me
 - 📊 Aspiring Data Analyst
-- 🎯 Currently learning: [List tools - Excel, SQL, Power BI, etc.]
+- 🎯 Currently learning:  - [Excel, SQL, Power BI, etc.]
 - 🌱 I document my learning journey here
 
 ## 📁 This Repository Contains
