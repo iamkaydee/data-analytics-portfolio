@@ -21,7 +21,11 @@
 
 ### Day 3 (Aug 20)
 - ✅ Create account on Kaggle
-- ✅ downloaded datasets from Kaggle
+- ✅ Downloaded datasets from Kaggle
+
+### Day 3 (Aug 20)
+- ✅ Attend training on data Cleaning
+- ✅ Attempted to commence data cleaning
 
 ---
 
