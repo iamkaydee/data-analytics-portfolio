@@ -1,6 +1,6 @@
 # 📦 Dataset Descriptions
 
-## retail-sales.csv
+## superstore_sales.csv
 - **Source:** Kaggle - Superstore Sales Dataset
 - **Size:** 9,800 rows, 18 columns
 - **Format:** CSV
@@ -8,8 +8,8 @@
 - **Description:** Retail dataset of a global superstore for 4 years. 
 - **Use Case:** Perform EDA and predict sales for the next 7 days from the last days of the training dataset
 
-## retail-sales.csv
-- **Source:** Kaggle - e-commerce dataset
+## messy_ecommerce_sales_data.csv
+- **Source:** Kaggle - Messy ecommerce Sales Data
 - **Size:** 104 rows, 11 columns
 - **Format:** CSV
 - **Last Updated:** Aug 20, 2026

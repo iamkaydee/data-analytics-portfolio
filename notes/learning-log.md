@@ -23,9 +23,20 @@
 - ✅ Create account on Kaggle
 - ✅ Downloaded datasets from Kaggle
 
-### Day 3 (Aug 20)
+### Day 4 (Aug 20)
 - ✅ Attend training on data Cleaning
 - ✅ Attempted to commence data cleaning
+
+### Day 5 (Aug 21)
+- ✅ Commenced data cleaning, run into inconsistent date issue
+
+### Day 6 (Aug 22)
+- ✅ Solved the challenges
+
+### Day 7 (Aug 23)
+- ✅ Apply the fix (Filter, Data - Text to Column ...)
+- ✅ Cleaned the date column and other messy columns
+- ✅ Project completed
 
 ---
 

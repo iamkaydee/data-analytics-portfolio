@@ -1,7 +1,7 @@
 # 💡 Excel Project Ideas
 
 ## Completed Projects
-- ✅  ------
+- ✅  Clean retail sales dataset
 
 ## Future Projects
 
@@ -23,13 +23,7 @@
 **Skills needed:** IF, VLOOKUP, Pivot tables
 **Status:** 📝 Idea only
 
-### 3. Clean retail sales dataset
-**Goal:** Group customers by spending level
-**Dataset:** Customer data
-**Skills needed:** Remove duplicates, Find & Replace, Text to column
-**Status:** 📝 Idea only
-
-### 3. Sales summary with formulas
+### 4. Sales summary with formulas
 **Goal:** Group customers by spending level
 **Dataset:** Customer data
 **Skills needed:** SUM, AVERAGE, COUNT, SUMIF, etc
