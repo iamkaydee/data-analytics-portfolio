@@ -15,7 +15,7 @@
 **Goal:** Track monthly income vs expenses
 **Dataset:** Personal or sample data
 **Skills needed:** SUMIF, charts, formatting
-**Status:** 📝 Idea only
+**Status:** 📝 Ongoing
 
 ### 3. Customer Segmentation
 **Goal:** Group customers by spending level

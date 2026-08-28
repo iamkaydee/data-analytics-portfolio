@@ -15,3 +15,11 @@
 - **Last Updated:** Aug 20, 2026
 - **Description:** Messy e-commerce dataset for data cleaning and analysis practice 
 - **Use Case:** Data cleaning, Analysis practice
+
+## synthetic_personal_finance_dataset.csv
+- **Source:** Kaggle - Synthetic Personal Finance Dataset
+- **Size:** 104 rows, 11 columns
+- **Format:** CSV
+- **Last Updated:** Aug 27, 2026
+- **Description:** A collection of individual financial records across income groups, regions, and loan statuses.
+- **Use Case:** Financial modelling, credit risk prediction, budget tracking, etc
