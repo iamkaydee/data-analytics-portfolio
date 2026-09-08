@@ -1,17 +1,143 @@
-# Excel temp files
-~$*.xlsx
+# ============================================================
+# Data Analytics Portfolio - Git Ignore
+# ============================================================
+
+# ------------------------------------------------------------
+# Operating system files
+# ------------------------------------------------------------
+
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+Desktop.ini
+
+
+# ------------------------------------------------------------
+# Editor / IDE files
+# ------------------------------------------------------------
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+
+# ------------------------------------------------------------
+# Temporary / backup files
+# ------------------------------------------------------------
+
 *.tmp
+*.temp
+*.bak
+*.backup
+~$*
+*.log
 
-# Large data files
-*.csv
-*.xlsx
 
-# Python files
+# ------------------------------------------------------------
+# Excel temporary / lock files
+# ------------------------------------------------------------
+
+~$*.xlsx
+~$*.xls
+~$*.xlsm
+
+
+# ------------------------------------------------------------
+# Python
+# ------------------------------------------------------------
+
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 
-# Environment variables
-.env
+.venv/
+venv/
+env/
+ENV/
 
-# Jupyter
+.pytest_cache/
+.mypy_cache/
+
 .ipynb_checkpoints/
+
+
+# ------------------------------------------------------------
+# Jupyter
+# ------------------------------------------------------------
+
+.jupyter/
+
+
+# ------------------------------------------------------------
+# Environment / secrets
+# ------------------------------------------------------------
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+
+
+# ------------------------------------------------------------
+# Large / generated files
+# ------------------------------------------------------------
+
+*.zip
+*.7z
+*.rar
+
+# Generated exports
+exports/
+output/
+outputs/
+
+
+# ------------------------------------------------------------
+# Local datasets
+# ------------------------------------------------------------
+
+# Do NOT globally ignore CSV/XLSX.
+# Small, legitimate project datasets can be committed when
+# appropriate.
+
+# Instead, ignore only explicitly private/local data:
+
+data/private/
+data/local/
+
+# Personal finance or other sensitive local data
+**/data/private/
+**/data/local/
+
+
+# ------------------------------------------------------------
+# Large raw datasets
+# ------------------------------------------------------------
+
+# If a dataset is too large for GitHub, add its specific
+# filename/path here rather than blocking all CSV/XLSX files.
+
+# Example:
+# projects/03-sales-analysis/data/raw/large_dataset.csv
+
+
+# ------------------------------------------------------------
+# Excel generated/temporary exports
+# ------------------------------------------------------------
+
+# Ignore temporary Excel exports, but keep actual workbooks.
+*.xlsb~
+*.xlsx~
+*.xlsm~
+
+
+# ------------------------------------------------------------
+# System-generated folders
+# ------------------------------------------------------------
+
+.cache/
