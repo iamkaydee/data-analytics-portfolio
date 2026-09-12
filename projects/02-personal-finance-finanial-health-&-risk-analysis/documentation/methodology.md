@@ -45,3 +45,10 @@ No final segmentation is approved. Potential dimensions include income, surplus,
 
 ## Scope control
 Analyses must contribute to the central question, reveal a meaningful pattern, test an important assumption, validate data quality, or improve KPI/dashboard/recommendation decisions.
+
+## Exploratory segmentation criteria
+Quartiles and percentiles are used as **distribution-based exploratory criteria**, not as official financial-risk thresholds. A quartile divides ordered observations into four approximately equal groups. A percentile identifies a position within an ordered distribution (for example, the 75th percentile). These methods may be useful for exploration, but they should not automatically be interpreted as domain-defined risk categories.
+
+For hidden-pattern analysis, Q4 income represents the highest 25% of income observations; an expense ratio above its 75th percentile (approximately 75%) represents relatively high expense burden; DTI above approximately 3.07 represents relatively high DTI in the exploratory distribution used; and a savings-to-income ratio above approximately 7.51 represents relatively high savings efficiency within the dataset. These are deliberately labelled **exploratory relative thresholds**.
+
+The hidden-pattern findings show that high income can coexist with high expense burden and high DTI, while low income can coexist with relatively strong savings efficiency. Therefore, final financial-health segmentation should combine multiple dimensions and should not label individuals as financially healthy or risky using any one exploratory threshold.

@@ -92,3 +92,103 @@ Investigate combinations such as:
 - DTI × Credit Score
 - Expense Ratio × Savings
 - Expense Ratio × DTI
+
+For every analysis: state what is being tested, why it matters, how it is calculated, what the data shows, what can/cannot be inferred, and whether it deserves to remain in the final project.
+
+## Scope guardrail
+Do not calculate every possible cross-tabulation. An analysis must help answer the financial-health question, reveal a meaningful pattern, test an important assumption, validate data quality, or improve KPI/dashboard/recommendation decisions.
+
+## Analysis 1 — Income × Expense Ratio
+Question: Does higher income change the proportion of income represented by monthly expenses?
+
+Method: Monthly income was divided into four **income quartiles** (8,106 records each). Quartiles are distribution-based groups: Q1 is the lowest 25%, Q2 the next 25%, Q3 the next 25%, and Q4 the highest 25%. Expense Ratio = monthly expenses ÷ monthly income.
+
+| Income quartile | Median income | Median expense ratio | Median surplus |
+|---|---:|---:|---:|
+| Q1 | $1,709.69 | ~60.1% | $544.20 |
+| Q2 | $3,361.68 | ~60.0% | $1,322.68 |
+| Q3 | $4,635.73 | ~60.0% | $1,850.48 |
+| Q4 | $6,273.46 | ~60.1% | $2,536.83 |
+
+Observation: Higher-income groups have substantially higher absolute surplus, while expense ratio remains approximately 60% across all four quartiles.
+
+Interpretation: Higher income increases absolute financial capacity in this dataset, but does not appear to reduce the proportional expense burden.
+
+Limitation: The unusually stable expense ratio may reflect the synthetic data-generation process rather than real-world spending behaviour.
+
+Decision: **KEEP** as a useful financial-health analysis and dashboard story.
+
+## Analysis 2 — Income × Savings-to-Income Ratio
+Question: As income increases, do people save a larger proportion of income, or simply accumulate larger savings balances?
+
+Savings-to-income ratio = savings ÷ (monthly income × 12).
+
+| Income quartile | Median income | Median savings | Median savings-to-income ratio |
+|---|---:|---:|---:|
+| Q1 | $1,709.69 | $77,107.83 | 5.03 |
+| Q2 | $3,361.68 | $198,497.26 | 5.01 |
+| Q3 | $4,635.73 | $284,350.36 | 5.10 |
+| Q4 | $6,273.46 | $381,829.07 | 5.02 |
+
+Observation: Savings balances rise strongly with income, but the savings-to-income ratio remains close to 5 across income quartiles.
+
+Interpretation: Higher income is associated with greater savings in absolute dollars, but not with a materially higher savings-to-income ratio in this dataset.
+
+Limitation: The highly stable ratio may be a synthetic-data construction.
+
+Decision: **KEEP**, particularly as evidence that absolute balances and financial ratios tell different stories.
+
+## Analysis 3 — DTI × Credit Score
+Question: Does higher debt burden appear to be associated with lower credit scores?
+
+Pearson correlation is approximately +0.012 for the full dataset and +0.015 among loan holders. This is essentially zero linear association.
+
+Exploratory DTI quartiles among loan holders also show no consistent credit-score pattern; median credit scores remain around the mid-to-high 500s across DTI groups.
+
+Observation: Credit scores do not vary systematically with DTI in this dataset.
+
+Interpretation: DTI does not appear to distinguish credit scores here.
+
+Limitation: This is descriptive correlation, not a formal significance test; correlation does not establish causation.
+
+Decision: **KEEP as a tested assumption/dataset-quality insight, but do not make it a major business finding.**
+
+## Analysis 4 — Hidden Risk: High Income + High Expense Burden + High DTI
+Question: Can people with high income still have relatively high financial burden?
+
+Exploratory thresholds were distribution-based rather than official risk thresholds:
+- High income = Q4 income (top 25%).
+- High expense burden = expense ratio above its 75th percentile, approximately 75%.
+- High DTI = DTI above its 75th percentile among the relevant exploratory distribution, approximately 3.07.
+
+Among 8,106 Q4-income individuals, 2,029 (25.0%) have expense ratios above ~75%.
+
+Among high-income loan holders, 276 are simultaneously above the exploratory high-DTI threshold. Across the full dataset, 77 records meet all three exploratory conditions: high income, high expense ratio and high DTI.
+
+Observation: High income does not automatically imply low relative financial burden.
+
+Interpretation: A multidimensional financial-health view is more informative than income alone.
+
+Limitation: These quartile/percentile thresholds are exploratory relative thresholds, not official definitions of financial risk. The 77 records should not be labelled financially risky solely on this basis.
+
+Decision: **KEEP as a core analytical insight.**
+
+## Analysis 5 — Hidden Resilience: Low Income + Strong Savings Efficiency
+Question: Can people in the lowest income group nevertheless show relatively strong savings behaviour?
+
+Method: Q1 income identifies the lowest 25% of earners. The 75th percentile of savings-to-income ratio is approximately 7.51. This is an exploratory relative threshold, not an official savings benchmark.
+
+Among 8,106 Q1-income individuals, 2,032 (25.1%) have savings-to-income ratios above 7.51.
+
+Observation: A meaningful subset of the lowest-income group has relatively high savings-to-income ratios.
+
+Interpretation: Income alone can also fail to identify potentially resilient financial profiles; financial-health assessment should consider savings behaviour alongside income.
+
+Limitation: Savings-to-income ratio above 7.51 is a dataset-relative criterion. It does not establish that these individuals are financially healthy in the real world.
+
+Decision: **KEEP**, but use it to support multidimensional segmentation rather than to create a risk label.
+
+## Analytical direction after hidden-pattern testing
+The analyses support a multidimensional financial-health framework involving income capacity, expense burden, surplus, savings/reserves and debt burden. Credit score appears less useful for differentiation in this particular synthetic dataset.
+
+No final financial-health classification or `High_Risk` flag has yet been approved. The next methodological task is to define defensible thresholds/segments before building the final KPI set and dashboard.

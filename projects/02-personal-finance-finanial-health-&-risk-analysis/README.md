@@ -32,5 +32,8 @@ The raw source is preserved. Unusual observations are investigated before being 
 - Correlation is treated as association, not causation.
 - Synthetic-data patterns are not presented as real-world population evidence.
 
+## Exploration completed so far
+The project has tested income against expense burden and savings efficiency, DTI against credit score, and several hidden high-burden/high-resilience combinations. The strongest emerging conclusion is that income alone does not adequately describe financial health.
+
 ## Current next step
-Investigate hidden financial-health patterns across income, expense burden, surplus, savings, debt burden and credit profile. The project will not calculate every possible combination merely because it is technically possible.
+Define defensible financial-health segments and thresholds from the evidence gathered so far. Then finalize analytical questions, KPIs and the Excel analysis layer before dashboard construction. The project will not calculate every possible combination merely because it is technically possible.
