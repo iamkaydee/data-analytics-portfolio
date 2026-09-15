@@ -15,6 +15,13 @@ Known characteristics:
 
 Used for **Project 02 — Personal Finance Dashboard**.
 
-The existing project notes describe the source dataset as having approximately 32,424 rows and 20 columns. The dashboard work involved cleaning/filtering the dataset and creating financial-risk analysis.
+The source contains 32,424 rows and 20 columns. It is preserved in the project as raw data, with a separate cleaned/analysis layer. The current work focuses on financial-health analysis and an Excel dashboard.
 
+### Important data-quality note
 
+Some filtering decisions in the original project require further review before being presented as universal financial rules. In particular, extremely high DTI and savings-to-income values should be interpreted according to the dataset's definitions and business context rather than automatically treated as impossible.
+
+The portfolio should preserve the distinction between:
+- the original/raw data,
+- documented transformation rules, and
+- the analysis-ready data used by the dashboard.

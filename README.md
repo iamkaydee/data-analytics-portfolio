@@ -11,8 +11,8 @@ A foundational Excel project focused on identifying and resolving common data-qu
 
 **Focus:** Data cleaning · Excel · Data preparation
 
-### 02 — Personal Finance Financial Health & Risk Analysis
-An interactive Excel dashboard built from a personal-finance dataset, with emphasis on financial-risk analysis and dashboard communication.
+### 02 — Personal Finance Dashboard
+A professional Excel analysis and dashboard project built from a synthetic personal-finance dataset. The project uses a documented, multidimensional financial-health framework and is being developed from analysis through dashboard communication.
 
 **Focus:** Excel · PivotTables · Charts · Slicers · Dashboard design · Analytical reasoning
 
@@ -48,4 +48,4 @@ My learning approach is project-first:
 
 ## Contact
 
-Email: oluwakayodeasamuel@gmail.com
+Email: [Add preferred professional email]

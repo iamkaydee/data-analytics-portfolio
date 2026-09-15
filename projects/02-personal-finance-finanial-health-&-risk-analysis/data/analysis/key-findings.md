@@ -15,7 +15,7 @@
 11. The synthetic dataset shows unusually uniform/mechanical patterns that should be acknowledged when communicating findings.
 
 ## Current priority
-Investigate combinations of income, expense burden, surplus, savings, debt burden and credit profile before defining financial-health segments or final KPIs.
+The financial-health framework is validated and locked. The current priority is completing the KPI-driven Excel analysis layer before dashboard construction.
 
 12. Income quartile analysis shows that median surplus rises from about $544 in Q1 to $2,537 in Q4, while median expense ratio remains approximately 60% across all income quartiles.
 13. Savings balances increase substantially across income quartiles, but the median savings-to-income ratio remains close to 5, showing that absolute savings and savings efficiency tell different stories.
@@ -38,3 +38,33 @@ Investigate combinations of income, expense burden, surplus, savings, debt burde
 22. The pressure-count pattern supports a provisional three-segment framework: Financially Resilient (0), Financially Pressured (1–2), and Financially Vulnerable (3–4). This is descriptive and dataset-relative, not an official risk model.
 23. Segment profiles are clearly differentiated: Resilient (14,578 records) has median surplus ≈$1,993; Pressured (15,933) ≈$941; Vulnerable (1,913) ≈$446.
 24. Credit score remains a supporting variable rather than a segmentation driver because its relationships with the other financial variables are extremely weak in this synthetic dataset.
+
+## Finding 25 — Financial-health segments show a strong surplus gradient
+Median monthly surplus falls from **$1,992.67** in the Financially Resilient segment to **$941.04** in the Financially Pressured segment and **$445.72** in the Financially Vulnerable segment.
+
+**Implication:** the segmentation corresponds to materially different levels of monthly financial capacity.
+
+## Finding 26 — Expense burden rises sharply across segments
+Median expense ratio rises from **51.6%** (Resilient) to **69.0%** (Pressured) and **83.3%** (Vulnerable).
+
+**Implication:** relative spending burden is a strong supporting characteristic of the segment structure.
+
+## Finding 27 — Savings decline substantially across segments
+Median savings falls from **$312,099.61** (Resilient) to **$113,579.51** (Pressured) and **$45,458.84** (Vulnerable). Median savings-to-income ratio also falls from **6.29** to **3.57** to **1.76**.
+
+**Implication:** both absolute savings and savings relative to annual income distinguish the segments.
+
+## Finding 28 — Loan exposure is highest in the Vulnerable segment
+Loan penetration rises from **35.5%** in the Resilient segment to **41.6%** in the Pressured segment and **62.5%** in the Vulnerable segment.
+
+**Implication:** the Vulnerable group combines higher financial pressure with substantially greater loan exposure.
+
+## Finding 29 — Excel analysis layer is now established
+The first analysis section, **Financial Health Overview**, has been built in the project workbook using segment-level counts and median-based measures. This establishes the core analytical table before dashboard construction.
+
+
+## Finding 30 — The executive KPI set is now defined
+Six executive KPIs have been selected: **Total Individuals, Median Monthly Income, Median Monthly Surplus, Median Expense Ratio, Loan Penetration, and Financially Vulnerable Rate**. Supporting measures will provide detail without overcrowding the executive view.
+
+## Finding 31 — The first Excel analysis section provides the core segment comparison
+The completed **Financial Health Overview** compares the three segments using population share, median income, expenses, surplus, expense ratio, savings, savings-to-income ratio and loan penetration. The measures show a consistent gradient from Resilient to Vulnerable and provide the analytical basis for subsequent dashboard visuals.

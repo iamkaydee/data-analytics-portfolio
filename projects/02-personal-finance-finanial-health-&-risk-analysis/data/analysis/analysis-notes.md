@@ -5,7 +5,7 @@
 
 Workflow: **Business problem → data understanding → data-quality audit → exploration → analytical questions → analysis → KPI selection → dashboard → recommendations**.
 
-Current stage: **exploration / identification of meaningful analytical questions**.
+Current stage: **KPI selection and Excel analysis-layer construction**.
 
 ## Dataset
 - 32,424 records × 20 columns
@@ -73,14 +73,16 @@ Pearson correlation measures linear association from -1 to +1; it does not estab
 Expense ratio is tightly structured; all surpluses are positive; credit score is nearly independent of other financial variables; regional/employment/age profiles are similar; loan categories are similar; and several ratios are mathematically consistent with source fields. These may reflect the synthetic data-generation process rather than real-world behaviour.
 
 ## Current analytical direction
-Explore financial health as a multidimensional concept involving:
+The exploratory phase has produced and validated a provisional three-segment framework. The current work is focused on converting that framework into a concise, decision-relevant Excel analysis layer.
+
+Financial health is treated as a multidimensional concept involving:
 1. Income capacity
 2. Expense burden
 3. Debt burden
 4. Financial reserves
 5. Credit profile
 
-No final financial-health classification or `High_Risk` flag has been approved.
+The approved project framework is the three-segment descriptive framework documented below. No separate binary `High_Risk` flag is used as the project classification.
 
 ## Next step: hidden patterns
 Investigate combinations such as:
@@ -247,4 +249,41 @@ Segment profiles in the current data:
 Credit score is retained as a supporting profile variable rather than a segmentation driver because its observed relationships with the financial variables are extremely weak in this dataset.
 
 ## Analytical direction after framework testing
-The exploratory phase has now produced a defensible provisional framework. The next stage is **KPI selection and Excel analysis-layer construction**, followed by dashboard design. Do not add further exploratory analyses unless they answer a specific unresolved business question or validate the framework.
+The exploratory phase has produced a defensible provisional framework, which has now been validated and locked for this project. The next stage is to complete the KPI-driven Excel analysis layer and then construct the dashboard. Further exploratory analysis should be added only if it answers a specific unresolved business question, validates the framework, or changes a dashboard/recommendation decision.
+
+## Analysis 7 — Financial Health Overview for Excel Analysis Layer
+
+**Status:** Completed in `excel/personal_finance_analysis.xlsx`.
+
+### Question
+How do the three provisional financial-health segments differ across the core financial-health measures selected for the executive analysis layer?
+
+### Measures
+- Individuals
+- % of population
+- Median income
+- Median expenses
+- Median monthly surplus
+- Median expense ratio
+- Median savings
+- Median savings-to-income ratio
+- Loan penetration
+
+### Results
+| Financial Health Segment | Individuals | % Population | Median Income | Median Expenses | Median Surplus | Median Expense Ratio | Median Savings | Median Savings-to-Income | Loan Penetration |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Financially Resilient | 14,578 | ~45.0% | $4,419.38 | $2,215.71 | $1,992.67 | 51.6% | $312,099.61 | 6.29 | 35.5% |
+| Financially Pressured | 15,933 | ~49.1% | $3,694.23 | $2,248.05 | $941.04 | 69.0% | $113,579.51 | 3.57 | 41.6% |
+| Financially Vulnerable | 1,913 | ~5.9% | $2,551.03 | $2,073.00 | $445.72 | 83.3% | $45,458.84 | 1.76 | 62.5% |
+
+### Observation
+The three segments show a coherent financial-health gradient. From Resilient to Vulnerable, median surplus falls sharply, expense burden rises, savings fall, savings-to-income efficiency falls, and loan penetration rises.
+
+### Interpretation
+The provisional pressure-based segmentation produces groups that are meaningfully differentiated on multiple supporting financial measures, not merely on the four indicators used to construct the pressure count.
+
+### Limitation
+This does not establish that the segmentation is an externally validated credit-risk model or that the observed differences are causal. The dataset is synthetic and the thresholds are distribution-based exploratory criteria.
+
+### Decision
+**KEEP.** This is the core summary table for the Excel analysis layer and provides the analytical foundation for the executive dashboard.

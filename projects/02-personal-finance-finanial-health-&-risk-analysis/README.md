@@ -7,7 +7,7 @@ Analyze income, expenses, savings, debt and credit characteristics to determine 
 > What financial characteristics distinguish financially healthy, financially strained, and potentially higher-risk individuals?
 
 ## Current status
-**Exploration phase.** Financial-health definitions, final analytical questions and final KPIs have not yet been finalized.
+**Exploration-to-framework phase.** Exploratory testing is complete enough to define a provisional financial-health framework. Final KPIs and dashboard layout are still pending.
 
 ## Workflow
 1. Business problem
@@ -35,5 +35,13 @@ The raw source is preserved. Unusual observations are investigated before being 
 ## Exploration completed so far
 The project has tested income against expense burden and savings efficiency, DTI against credit score, and several hidden high-burden/high-resilience combinations. The strongest emerging conclusion is that income alone does not adequately describe financial health.
 
+## Current analytical framework
+A provisional three-segment framework has been selected for testing:
+- **Financially Resilient:** 0 exploratory financial-pressure indicators
+- **Financially Pressured:** 1–2 exploratory financial-pressure indicators
+- **Financially Vulnerable:** 3–4 exploratory financial-pressure indicators
+
+The framework is **not an official credit-risk model**. Its thresholds are dataset-relative exploratory criteria.
+
 ## Current next step
-Define defensible financial-health segments and thresholds from the evidence gathered so far. Then finalize analytical questions, KPIs and the Excel analysis layer before dashboard construction. The project will not calculate every possible combination merely because it is technically possible.
+Finalize the KPI set and build the Excel analysis layer using the approved framework. Then construct the dashboard. The project will not calculate every possible combination merely because it is technically possible.
