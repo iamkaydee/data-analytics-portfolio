@@ -28,4 +28,17 @@
 
 **Expense Ratio** = monthly expenses ÷ monthly income. In this project it means the proportion of monthly income represented by monthly expenses.
 
-Potential future fields such as income bands, DTI bands, risk flags and financial-health segments remain under consideration and are not finalized.
+The current analysis layer also contains:
+
+| Derived field | Meaning / rule |
+|---|---|
+| monthly_surplus | monthly income − monthly expenses |
+| expense_ratio | monthly expenses ÷ monthly income |
+| high_expense_burden_flag | 1 when expense ratio > 74.97188473%; otherwise 0 |
+| high_dti_flag | 1 when has_loan = Yes and DTI > 3.07; otherwise 0 |
+| low_surplus_flag | 1 when monthly surplus < $752.55; otherwise 0 |
+| low_savings_efficiency_flag | 1 when savings-to-income ratio < 2.58; otherwise 0 |
+| pressure_count | Sum of the four pressure flags (0–4) |
+| financial_health_segment | 0 pressures = Resilient; 1–2 = Pressured; 3–4 = Vulnerable |
+
+The financial-health segment is a descriptive, dataset-relative analytical classification and is not an official credit-risk score or prediction model.

@@ -34,3 +34,6 @@ Ten loan holders have DTI recorded as exactly 0 despite positive loan/EMI values
 
 ## Current principle
 **Clean structural errors; investigate unusual values; do not delete observations simply because they are extreme.**
+
+## Current analysis-layer status
+No destructive filtering has been introduced. The analysis layer adds derived metrics and exploratory pressure flags using documented dataset-relative thresholds; the raw dataset remains preserved.

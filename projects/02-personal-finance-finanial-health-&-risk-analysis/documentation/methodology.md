@@ -41,12 +41,20 @@ For important results, separate:
 4. **Decision** — whether the result matters to the project.
 
 ## Financial-health segmentation
-A **provisional descriptive segmentation** is approved for the portfolio after exploratory testing. It uses four indicators: high expense burden, high DTI, low surplus and low savings efficiency. Each record receives a pressure count from 0–4, then is grouped as:
+A **descriptive, dataset-relative segmentation** is approved and locked for the portfolio after exploratory testing and sensitivity review. It uses four indicators: high expense burden, high DTI, low surplus and low savings efficiency. Each record receives a pressure count from 0–4, then is grouped as:
 - **Financially Resilient:** 0 pressures
 - **Financially Pressured:** 1–2 pressures
 - **Financially Vulnerable:** 3–4 pressures
 
 This segmentation is not an official credit-risk model, prediction model, or domain-certified financial-health score. The thresholds are relative to this dataset and are intended to communicate patterns consistently. Credit score is not a segmentation driver because it shows almost no linear relationship with the other financial variables in this dataset.
+
+### Locked exploratory thresholds
+- High expense burden: expense ratio > **74.97188473%** (dataset 75th percentile).
+- High DTI: DTI > **3.07** among loan holders (dataset 75th percentile).
+- Low surplus: monthly surplus < **$752.55** (dataset 25th percentile).
+- Low savings efficiency: savings-to-income ratio < **2.58** (dataset 25th percentile).
+
+The exact thresholds are retained in the Excel formulas so that the segment counts reproduce the validated totals of 14,578 Resilient, 15,933 Pressured and 1,913 Vulnerable records.
 
 ## Scope control
 Analyses must contribute to the central question, reveal a meaningful pattern, test an important assumption, validate data quality, or improve KPI/dashboard/recommendation decisions.
@@ -57,3 +65,11 @@ Quartiles and percentiles are used as **distribution-based exploratory criteria*
 For hidden-pattern analysis, Q4 income represents the highest 25% of income observations; an expense ratio above its 75th percentile (approximately 75%) represents relatively high expense burden; DTI above approximately 3.07 represents relatively high DTI in the exploratory distribution used; and a savings-to-income ratio above approximately 7.51 represents relatively high savings efficiency within the dataset. These are deliberately labelled **exploratory relative thresholds**.
 
 The hidden-pattern findings show that high income can coexist with high expense burden and high DTI, while low income can coexist with relatively strong savings efficiency. Therefore, final financial-health segmentation should combine multiple dimensions and should not label individuals as financially healthy or risky using any one exploratory threshold.
+
+## Excel Analysis Layer Method
+
+The first Excel analysis section groups records by the provisional Financial Health Segment and calculates **median-based** summary measures. Median is used for financial amounts and ratios because it represents the middle observation and is less sensitive to extreme values than the arithmetic mean.
+
+The first section includes population size, population share, median income, median expenses, median monthly surplus, median expense ratio, median savings, median savings-to-income ratio, and loan penetration.
+
+This section is intentionally completed before dashboard design so that visualizations are based on established analytical measures rather than chosen for appearance first.
